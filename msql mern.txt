@@ -1,0 +1,15 @@
+-- 1. Create the database
+CREATE DATABASE IF NOT EXISTS mern;
+
+-- 2. Use the newly created database
+USE mern;
+
+-- 3. Create the users table
+CREATE TABLE IF NOT EXISTS  imageusers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    image VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
